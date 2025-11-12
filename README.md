@@ -92,7 +92,7 @@ El análisis final resume qué tienda tiene:
 * 📈 Mejor rendimiento (beneficio neto)
 * 📉 Peor rendimiento
 
-Además, recomienda qué tienda vender según distintos objetivos: eficiencia, reputación, reducción de costos o capital inmediato.
+Además, recomienda qué tienda vender según distintos objetivos: eficiencia, reputación, capital inmediato o reducción de costos.
 
 ## 🧑‍💻 Autor
 
