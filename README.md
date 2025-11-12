@@ -26,26 +26,11 @@ El trabajo se desarrolla originalmente en Google Colab y genera **un informe en 
 ## 📂 Estructura del proyecto
 
 AluraStoreLatam.ipynb
-│
-├── Carga de datos (4 tiendas desde URLs públicas)
-├── Limpieza y unificación de datos
-├── Funciones de análisis:
-│   ├── calcular_ingreso_por_tienda()
-│   ├── calcular_ventas_por_categoria()
-│   ├── calcular_calificaciones_promedio()
-│   ├── productos_mas_y_menos_vendidos()
-│   ├── costo_envio_promedio()
-│   └── rendimiento (Ingreso - Costos)
-│
-├── Visualizaciones:
-│   ├── graficar_ingreso_por_tienda()
-│   ├── graficar_satisfaccion_tiendas()
-│   ├── graficar_costo_envio_promedio()
-│   ├── graficar_rendimiento_tiendas()
-│   └── visualizar_mapa_cluster_tiendas()
-│
-└── Informe final:
-    └── generar_informe_venta_tienda()
+- Carga de datos (4 tiendas desde URLs públicas)
+- Limpieza y unificación de datos
+- Funciones de análisis: `calcular_ingreso_por_tienda()`, `calcular_ventas_por_categoria()`, `calcular_calificaciones_promedio()`, `productos_mas_y_menos_vendidos()`, `costo_envio_promedio()`, `rendimiento (Ingreso - Costos)`
+- Visualizaciones: `graficar_ingreso_por_tienda()`, `graficar_satisfaccion_tiendas()`, `graficar_costo_envio_promedio()`, `graficar_rendimiento_tiendas()`, `visualizar_mapa_cluster_tiendas()`
+- Informe final: `generar_informe_venta_tienda()`
 
 ## 📊 Etapas del análisis
 
