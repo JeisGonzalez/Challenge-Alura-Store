@@ -1,100 +1,150 @@
- #  🧾 Análisis de Ventas y Rendimiento de Alura Store
- 
+# 🧾 Análisis de Ventas y Rendimiento — *Alura Store LATAM*
+
 ## 📋 Descripción general
 
-Este proyecto realiza un **análisis integral de datos de ventas** provenientes de cuatro tiendas diferentes.  
-Utilizando Python y diversas bibliotecas de análisis y visualización, se busca identificar:
+Este proyecto realiza un **análisis integral del desempeño comercial** de cuatro tiendas distintas, utilizando Python para explorar:
 
-* Qué tiendas generan mayores ingresos.
-* Cuáles son más rentables.
-* Cómo varía la satisfacción de los clientes.
-* Qué estrategias podrían aplicarse si el dueño quisiera vender alguna tienda.
+- Qué tiendas generan mayores ingresos.  
+- Cuáles son más rentables y muestran mejores tendencias de crecimiento.  
+- Cómo se comporta la satisfacción del cliente en cada tienda.  
+- Qué tan eficiente es la logística según los costos y destinos de envío.  
+- Qué tienda sería más conveniente vender según distintos criterios estratégicos.
 
-El trabajo se desarrolla originalmente en Google Colab y genera **un informe en Markdown y HTML**, que incluye texto interpretativo y gráficos generados dinámicamente.
+El análisis se desarrolla en **Google Colab**, integra múltiples visualizaciones interactivas y genera un **informe en Markdown** con conclusiones y recomendaciones clave.
+
+---
 
 ## 🧰 Librerías utilizadas
 
-| Librería | Descripción |
-|------------|------------|
-| pandas | Manipulación y análisis de datos tabulares |
-| matplotlib | Visualización gráfica básica (barras, dispersión, etc) |
-| seaborn | Extensión de Matplotlib para gráficos estadísticos con mejor estética |
-| plotly | Visualizaciones interactivas, especialmente para indicadores de satisfacción |
-| folium | Mapas interactivos (visualización geográfica de las tiendas) |
-| IPython.display | Renderizado de Markdown dentro del notebook |
+| Librería | Función |
+|----------|---------|
+| **pandas** | Manipulación y análisis de datos tabulares |
+| **plotly** | Visualizaciones interactivas y dashboards |
+| **folium** | Mapas interactivos y análisis geográfico |
+| **IPython.display** | Renderizado dinámico de Markdown |
+
+---
 
 ## 📂 Estructura del proyecto
 
-AluraStoreLatam.ipynb
-│
-├── Carga de datos (4 tiendas desde URLs públicas)
-├── Limpieza y unificación de datos
-├── Funciones de análisis:
-│   ├── calcular_ingreso_por_tienda()
-│   ├── calcular_ventas_por_categoria()
-│   ├── calcular_calificaciones_promedio()
-│   ├── productos_mas_y_menos_vendidos()
-│   ├── costo_envio_promedio()
-│   └── rendimiento (Ingreso - Costos)
-│
-├── Visualizaciones:
-│   ├── graficar_ingreso_por_tienda()
-│   ├── graficar_satisfaccion_tiendas()
-│   ├── graficar_costo_envio_promedio()
-│   ├── graficar_rendimiento_tiendas()
-│   └── visualizar_mapa_cluster_tiendas()
-│
-└── Informe final:
-    └── generar_informe_venta_tienda()
+**AluraStoreLatam.ipynb**
+
+Incluye:
+
+### 🗂️ 1. Carga y preparación de datos
+
+- Lectura de 4 datasets desde URLs públicas.  
+- Limpieza, conversión de tipos y unificación en un DataFrame único (`df_unificado`).
+
+### 📈 2. Funciones de análisis
+
+Entre ellas:
+
+- `total_revenue()`  
+- `monthly_revenue()`  
+- `quarterly_revenue()`  
+- `category_revenue()`  
+- `quantity_category()`  
+- `quarter_category()`  
+- `category_rank()`  
+- `store_rating()`  
+- `top_products()`  
+- `bottom_products()`  
+- `product_dependency()`  
+- `quarter_products()`
+
+### 📊 3. Visualizaciones
+
+Funciones como:
+
+- `quarterly_chart()`  
+- `revenue_graph()`  
+- `quantity_graph()`  
+- `satisfaction_chart()`  
+- `product_dependency_chart()`  
+- `top_bottom_chart()`  
+- `shipping_location_chart()`  
+- `heatmap_store_shipping()`
+
+### 📝 4. Informe final
+
+- `generate_inform()` compila un **informe ejecutivo en Markdown** con análisis y recomendaciones.
+
+---
 
 ## 📊 Etapas del análisis
 
-### 1) Importación y unificación de datos
+### **1) Importación y unificación de datos**
+Se cargan los archivos `tienda_1.csv` a `tienda_4.csv` desde GitHub y se consolidan en un DataFrame principal, agregando indicadores de tienda y normalizando columnas clave.
 
-Se cargan los datasets `tienda_1.csv` a `tienda_4.csv` desde GitHub y se combinan en un único DataFrame (`df_unificado`).
+---
 
-### 2) Análisis descriptivo
+### **2) Análisis descriptivo**
 
-* Ingresos totales por tienda
-* Ventas por categoría de producto
-* Productos más y menos vendidos
-* Calificación promedio
-* Costos logísticos
-* Rendimiento neto (Ingreso - Costo de envío)
+Incluye:
 
-### 3) Visualizaciones
+- Ingresos totales y por periodos (mes / trimestre)  
+- Participación por categoría  
+- Productos más y menos vendidos  
+- Calificación promedio por tienda  
+- Costos logísticos  
+- Dependencia por producto  
+- Evolución trimestral  
 
-Cada sección genera gráficos para ilustrar los resultados:
+---
 
-* Barras comparativas (`matplotlib` + `seaborn`).
-* Indicadores tipo gauge (`plotly`).
-* Dispersión de costos promedio.
-* Mapas interactivos (`folium`).
+### **3) Visualizaciones**
 
-### 4) Informe
+Se generan gráficos interactivos para:
 
-La función `generar_informe_venta_tienda()`:
+- Ingresos trimestrales  
+- Participación por categoría  
+- Volumen por producto  
+- Indicadores de satisfacción  
+- Mapas de envíos  
+- Heatmaps de ciudades por trimestre  
 
-* Presenta el análisis paso a paso.
-* Muestra los gráficos correspondientes.
-* Genera un texto conclusivo con recomendaciones estratégicas.
+Las visualizaciones utilizan **Plotly** y **Folium**.
+
+---
+
+### **4) Informe automático**
+
+La función `generate_inform()`:
+
+- Presenta el análisis completo paso a paso.  
+- Resume puntos clave por área (finanzas, logística, satisfacción, surtido).  
+- Genera un texto ejecutivo que sintetiza recomendaciones estratégicas.  
+
+---
 
 ## 📈 Resultados esperados
 
-El análisis final resume qué tienda tiene:
+El informe determina qué tienda tiene:
 
-* 💸 Mayor ingreso
-* 📉 Menor ingreso
-* 🚚 Mayor costo logístico
-* 💰 Menor costo logístico
-* ⭐ Mejor calificación
-* ⚠️ Peor calificación
-* 📈 Mejor rendimiento (beneficio neto)
-* 📉 Peor rendimiento
+- 💸 Mayor ingreso  
+- 📉 Menor ingreso  
+- 🚚 Mayor costo logístico  
+- 💰 Menor costo logístico  
+- ⭐ Mejor calificación  
+- ⚠️ Peor calificación  
+- 📈 Mejor rendimiento  
+- 📉 Peor rendimiento  
 
-Además, recomienda qué tienda vender según distintos objetivos: eficiencia, reputación, capital inmediato o reducción de costos.
+También propone **qué tienda vender según distintos objetivos**:
+
+- Maximizar satisfacción del cliente  
+- Reducir costos
+- Minimizar riesgo comercial
+- Enfocarse en crecimiento  
+- Obtener liquidez inmediata  
+
+---
 
 ## 🧑‍💻 Autor
 
-Proyecto desarrollado como práctica de análisis de datos con Python y Google Colab.  
-_Practicando Python para Data Science: Challenge Alura Store_
+Proyecto desarrollado como parte del desafío:
+**_Practicando Python para Data Science: Challenge Alura Store_**
+Analizado y documentado en Google Colab como práctica de análisis de datos, visualización e interpretación estratégica.
+
+---
