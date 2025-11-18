@@ -27,6 +27,7 @@ El análisis se desarrolla en **Google Colab**, integra múltiples visualizacion
 
 ## 📂 Estructura del proyecto
 
+<<<<<<< HEAD
 **AluraStoreLatam.ipynb**
 
 Incluye:
@@ -71,6 +72,14 @@ Funciones como:
 - `generate_inform()` compila un **informe ejecutivo en Markdown** con análisis y recomendaciones.
 
 ---
+=======
+AluraStoreLatam.ipynb
+- Carga de datos (4 tiendas desde URLs públicas)
+- Limpieza y unificación de datos
+- Funciones de análisis: `calcular_ingreso_por_tienda()`, `calcular_ventas_por_categoria()`, `calcular_calificaciones_promedio()`, `productos_mas_y_menos_vendidos()`, `costo_envio_promedio()`, `rendimiento (Ingreso - Costos)`
+- Visualizaciones: `graficar_ingreso_por_tienda()`, `graficar_satisfaccion_tiendas()`, `graficar_costo_envio_promedio()`, `graficar_rendimiento_tiendas()`, `visualizar_mapa_cluster_tiendas()`
+- Informe final: `generar_informe_venta_tienda()`
+>>>>>>> 50699de1b928c19fb087745a6222fddc98125d87
 
 ## 📊 Etapas del análisis
 
@@ -143,8 +152,13 @@ También propone **qué tienda vender según distintos objetivos**:
 
 ## 🧑‍💻 Autor
 
+<<<<<<< HEAD
 Proyecto desarrollado como parte del desafío:
 **_Practicando Python para Data Science: Challenge Alura Store_**
 Analizado y documentado en Google Colab como práctica de análisis de datos, visualización e interpretación estratégica.
 
 ---
+=======
+Proyecto desarrollado como práctica de análisis de datos con Python y Google Colab.  
+_Practicando Python para Data Science: Challenge Alura Store_
+>>>>>>> 50699de1b928c19fb087745a6222fddc98125d87
